@@ -14,3 +14,25 @@ export const GET_POKEMON_LIST = gql`
     }
   }
 `;
+
+export const GET_POKEMON_DETAIL = gql`
+  query GetPokemonDetail($name: String!) {
+    pokemon(name: $name) {
+      id
+      name
+      height
+      weight
+      types {
+        slot
+        type {
+          name
+        }
+      }
+      moves {
+        move {
+          name
+        }
+      }
+    }
+  }
+`;

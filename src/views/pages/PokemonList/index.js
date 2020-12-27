@@ -18,7 +18,7 @@ const PokemonList = () => {
   });
 
   // Get my pokemon from localStorage
-  const myPokemonList = JSON.parse(localStorage.getItem("myPokemonList"));
+  const myPokemonList = JSON.parse(localStorage.getItem("myPokemonList")) || [];
 
   // Add the total of pokemon owned to the PokemonItem object
   const newPokemonList =
