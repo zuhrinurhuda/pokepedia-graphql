@@ -2,7 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 
-import { List, ListItem, H4, Button } from "views/components";
+import { List, ListItem, H1, H2, Button } from "views/components";
 import { getAvatarImage } from "utils";
 
 const MyPokemonList = () => {
@@ -40,19 +40,18 @@ const MyPokemonList = () => {
 
   return (
     <>
-      <h1
-        css={css`
-          text-align: center;
-        `}
-      >
-        My Pokemon List
-      </h1>
+      <H1>My Pokemon List</H1>
       <List>
         {myPokemonList.map((pokemon, index) =>
           pokemon.nickname.map((nickname) => (
             <ListItem key={nickname}>
               <div>
-                <img src={getAvatarImage(pokemon.id)} alt={pokemon.name} />
+                <img
+                  width={96}
+                  height={96}
+                  src={getAvatarImage(pokemon.id)}
+                  alt={pokemon.name}
+                />
               </div>
               <div
                 css={css`
@@ -64,7 +63,7 @@ const MyPokemonList = () => {
                 `}
               >
                 <div>
-                  <H4>{pokemon.name}</H4>
+                  <H2>{pokemon.name}</H2>
                   <p>{`Nickname: ${nickname}`}</p>
                 </div>
                 <div>

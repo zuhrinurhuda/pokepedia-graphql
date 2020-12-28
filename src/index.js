@@ -17,9 +17,11 @@ ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <Switch>
-          <App />
-        </Switch>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <App />
+          </Switch>
+        </React.Suspense>
       </BrowserRouter>
     </ApolloProvider>
   </React.StrictMode>,

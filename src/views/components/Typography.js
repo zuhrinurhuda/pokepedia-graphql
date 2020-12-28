@@ -11,9 +11,10 @@ export const H1 = (props) => (
   />
 );
 
-export const H4 = (props) => (
-  <h4
+export const H2 = (props) => (
+  <h2
     css={css`
+      font-size: 1.17em;
       text-transform: uppercase;
       color: rgba(49, 53, 59, 0.96);
     `}

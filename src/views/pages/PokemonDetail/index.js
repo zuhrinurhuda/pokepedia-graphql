@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import { css } from "@emotion/react";
 
+import { H1 } from "views/components";
 import { GET_POKEMON_DETAIL } from "state/operations/queries/pokemon";
 import { Action, Description } from "./components";
 import { getRandomInt } from "utils";
@@ -101,11 +102,7 @@ const PokemonDetail = () => {
   if (error) return <p>Error :(</p>;
   return (
     <>
-      <h1
-        css={css`
-          text-align: center;
-        `}
-      >{`${data.pokemon.name.toUpperCase()} #${data.pokemon.id}`}</h1>
+      <H1>{`${data.pokemon.name.toUpperCase()} #${data.pokemon.id}`}</H1>
       <div
         css={css`
           display: flex;

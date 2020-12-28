@@ -43,8 +43,6 @@ export const NavigationItem = ({ to, width, ...props }) => (
         display: contents;
         &,
         & > img {
-          width: 24px;
-          height: 24px;
           margin-bottom: 4px;
         }
       `}
