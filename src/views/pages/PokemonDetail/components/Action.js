@@ -44,6 +44,7 @@ const Description = ({
     {isCatching && (
       <img
         width={96}
+        height={96}
         src={pokeball}
         alt="pokeball"
         css={css`
@@ -81,6 +82,8 @@ const Description = ({
     {!isCatching && !isCaught && (
       <>
         <img
+          width={96}
+          height={96}
           src={getAvatarImage(pokemon.id)}
           alt={pokemon.name}
           css={css`

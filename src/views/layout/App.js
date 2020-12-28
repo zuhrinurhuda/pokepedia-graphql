@@ -15,6 +15,8 @@ function App() {
       <Navigation>
         <NavigationItem width="50%" to="/">
           <img
+            width={24}
+            height={24}
             src={`https://assets.tokopedia.net/assets-tokopedia-lite/v2/atreus/kratos/${
               location.pathname === "/" ? "811ee09c" : "518bf1c8"
             }.svg`}
@@ -24,6 +26,8 @@ function App() {
         </NavigationItem>
         <NavigationItem width="50%" to="/my-pokemon">
           <img
+            width={24}
+            height={24}
             src={`https://assets.tokopedia.net/assets-tokopedia-lite/v2/atreus/kratos/${
               location.pathname === "/my-pokemon" ? "99a999cc" : "7187ed7c"
             }.svg`}

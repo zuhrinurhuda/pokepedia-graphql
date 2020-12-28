@@ -1,19 +1,19 @@
-import { PokemonList, PokemonDetail, MyPokemonList } from "views/pages";
+import React from "react";
 
 const routes = [
   {
     path: "/",
-    component: PokemonList,
+    component: React.lazy(() => import("views/pages/PokemonList")),
     exact: true,
   },
   {
     path: "/detail/:name",
-    component: PokemonDetail,
+    component: React.lazy(() => import("views/pages/PokemonDetail")),
     exact: true,
   },
   {
     path: "/my-pokemon",
-    component: MyPokemonList,
+    component: React.lazy(() => import("views/pages/MyPokemonList")),
     exact: true,
   },
 ];

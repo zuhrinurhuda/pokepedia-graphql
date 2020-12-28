@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { List, ListItem, H1, H4, Button, Pagination } from "views/components";
+import { List, ListItem, H1, H2, Button, Pagination } from "views/components";
 import { GET_POKEMON_LIST } from "state/operations/queries/pokemon";
 import { getAvatarImage, getPokemonId } from "utils";
 
@@ -58,6 +58,8 @@ const PokemonList = () => {
           newPokemonList.map((pokemon) => (
             <ListItem key={pokemon.name}>
               <img
+                width={96}
+                height={96}
                 src={getAvatarImage(getPokemonId(pokemon.url))}
                 alt={pokemon.name}
               />
@@ -71,7 +73,7 @@ const PokemonList = () => {
                 `}
               >
                 <div>
-                  <H4>{pokemon.name}</H4>
+                  <H2>{pokemon.name}</H2>
                   <p>{`Owned: ${pokemon.owned || 0}`}</p>
                 </div>
                 <div>
